@@ -1,4 +1,4 @@
-package com.example.chordstar.chordstar;
+package guitarheroes.com.chordstars;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
