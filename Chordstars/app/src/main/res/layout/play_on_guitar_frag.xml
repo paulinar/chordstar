@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1A1919"
+    android:gravity="center" >
+
+    <ImageView
+        android:id="@+id/musicalNote"
+        android:layout_width="532px"
+        android:layout_height="411px"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/rotatewatch" />
+
+    <TextView
+        android:id="@+id/stateOfGrace"
+        android:layout_width="match_parent"
+        android:layout_height="20sp"
+        android:layout_weight="1"
+        android:text="Please rotate your watch 180-degrees
+such that the screen is facing up
+on the underside of your wrist."
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="-45dp"/>
+
+</LinearLayout>

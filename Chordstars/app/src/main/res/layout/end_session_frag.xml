@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="20sp"
         android:layout_weight="1"
-        android:text="YOU SELECTED:"
+        android:text="NOW PLAYING:"
         android:textColor="#E9A172"
         android:textSize="20sp"
         android:gravity="center"
@@ -37,41 +37,29 @@
         android:fontFamily="sans-serif-light"
         android:layout_marginTop="-45dp"/>
 
-    <Button
-        android:id="@+id/playOnGuitarBtn"
-        android:onClick="playOnGuitar"
+    <ImageView
+        android:id="@+id/silhouettePlaying"
+        android:layout_width="133px"
+        android:layout_height="144px"
+        android:layout_centerInParent="true"
+        android:src="@drawable/silhouetteplaying" />
 
-        android:text="PLAY ON GUITAR"
+    <Button
+        android:id="@+id/endSessionBtn"
+        android:onClick="endSession"
+
+        android:text="END SESSION"
         android:textColor="#ED4B94"
         android:textSize="20sp"
 
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/buttonshape"
-        android:drawableLeft="@drawable/iconguitar"
-        android:drawablePadding="-20dp"
-
-        android:fontFamily="sans-serif-light"
-        android:layout_marginBottom="10dp"
-        />
-
-    <Button
-        android:id="@+id/listenToSongBtn"
-
-        android:text="LISTEN TO SONG"
-        android:textColor="#ED4B94"
-        android:textSize="20sp"
-
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:background="@drawable/buttonshape"
-        android:drawableLeft="@drawable/iconear"
+        android:drawableLeft="@drawable/iconend"
         android:drawablePadding="-20dp"
         android:layout_marginTop="5dp"
 
         android:fontFamily="sans-serif-light"
-
-        android:onClick="onOpenWebBrowser"
         android:layout_marginBottom="15dp"
 
         />

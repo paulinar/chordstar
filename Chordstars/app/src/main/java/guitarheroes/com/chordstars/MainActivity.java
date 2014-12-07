@@ -37,34 +37,41 @@ public class MainActivity extends Activity {
     public void selectFrag(View view) {
         Fragment fr;
 
-//        if(view == findViewById(R.id.button2)) {
-//            fr = new FragmentTwo();
-//
-//        }else {
-//            fr = new FragmentOne();
-//        }
-
         if (view == findViewById(R.id.selectSongBtn)) {
             fr = new SelectSongFrag2();
             findViewById(R.id.selectSongBtn).setVisibility(View.GONE);
             findViewById(R.id.downloadMoreBtn).setVisibility(View.GONE);
             findViewById(R.id.musicalNote).setVisibility(View.GONE);
 
-//            Button playOnGuitarBtn = (Button) findViewById(R.id.selectSongBtn);
-//            playOnGuitarBtn.setTag(1);
-//            playOnGuitarBtn.setText("PLAY ON GUITAR");
-//
-//            Button listenToSong = (Button) findViewById(R.id.downloadMoreBtn);
-//            listenToSong.setTag(1);
-//            listenToSong.setText("LISTEN TO SONG");
-
         } else if (view == findViewById(R.id.downloadMoreBtn)) {
-            fr = new SelectSongFrag1();
+            fr = new SelectSongFrag1(); // TODO: clean up code
             startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("http://www.google.com")));
         } else {
-            fr = new SelectSongFrag1(); // TODO: OPEN CHROME
+            fr = new SelectSongFrag1();
         }
 
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+
+        fragmentTransaction.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_in_left);
+        fragmentTransaction.replace(R.id.fragment_place, fr);
+        fragmentTransaction.commit();
+
+    }
+
+    public void endSession(View view) {
+        Fragment fr;
+        fr = new EndSessionFrag();
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_place, fr);
+        fragmentTransaction.commit();
+
+    }
+
+    public void playOnGuitar(View view) {
+        Fragment fr;
+        fr = new PlayOnGuitarFrag();
         FragmentManager fm = getFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.replace(R.id.fragment_place, fr);
