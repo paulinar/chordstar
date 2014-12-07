@@ -42,6 +42,7 @@
         android:layout_width="133px"
         android:layout_height="144px"
         android:layout_centerInParent="true"
+        android:layout_marginBottom="3dp"
         android:src="@drawable/silhouetteplaying" />
 
     <Button

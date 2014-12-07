@@ -12,7 +12,8 @@
         android:layout_width="395px"
         android:layout_height="384px"
         android:layout_centerInParent="true"
-        android:src="@drawable/taylorswift" />
+        android:src="@drawable/taylorswift"
+        android:layout_marginBottom="10dp"/>
 
     <ImageView
         android:id="@+id/score"
@@ -31,7 +32,7 @@
         android:textSize="20sp"
         android:gravity="center"
         android:fontFamily="sans-serif-light"
-        android:layout_marginTop="-45dp"/>
+        android:layout_marginTop="-15dp"/>
 
     <Button
         android:id="@+id/playbackSessionBtn"
@@ -81,7 +82,6 @@
         android:background="@drawable/buttonshape"
         android:drawableLeft="@drawable/iconchoose"
         android:drawablePadding="2dp"
-        android:layout_marginTop="5dp"
 
         android:fontFamily="sans-serif-light"
 
