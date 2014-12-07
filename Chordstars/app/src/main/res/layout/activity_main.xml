@@ -1,8 +1,53 @@
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    tools:ignore="MergeRootFrame" />
+    android:orientation="vertical"
+    android:background="#1A1919"
+    android:gravity="center" >
+
+    <fragment
+        android:name="guitarheroes.com.chordstars.SelectSongFrag1"
+        android:id="@+id/fragment_place"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/selectSongBtn"
+        android:onClick="selectFrag"
+
+        android:text="SELECT SONG"
+        android:textColor="#ED4B94"
+        android:textSize="20sp"
+
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/buttonshape"
+
+        android:fontFamily="sans-serif-light"
+        android:layout_marginBottom="10dp"
+        />
+
+    <Button
+        android:id="@+id/downloadMoreBtn"
+
+        android:text="DOWNLOAD MORE SONGS"
+        android:textColor="#ED4B94"
+        android:textSize="20sp"
+
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/buttonshape"
+        android:drawableLeft="@drawable/iconplus"
+
+        android:fontFamily="sans-serif-light"
+
+        android:onClick="onOpenWebBrowser"
+        android:layout_marginBottom="15dp"
+
+        />
+
+    </fragment>
+
+</LinearLayout>
+

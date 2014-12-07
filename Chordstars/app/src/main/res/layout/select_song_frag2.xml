@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1A1919"
+    android:gravity="center" >
+
+    <ImageView
+        android:id="@+id/taylorSwift"
+        android:layout_width="wrap_content"
+        android:layout_height="340sp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/taylorswift" />
+
+    <TextView
+        android:id="@+id/youSelected"
+        android:layout_width="match_parent"
+        android:layout_height="20sp"
+        android:layout_weight="1"
+        android:text="YOU SELECTED:"
+        android:textColor="#E9A172"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:fontFamily="sans-serif-light"/>
+
+    <TextView
+        android:id="@+id/stateOfGrace"
+        android:layout_width="match_parent"
+        android:layout_height="20sp"
+        android:layout_weight="1"
+        android:text="''State of Grace'' by Taylor Swift"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="-45dp"/>
+
+    <Button
+        android:id="@+id/playOnGuitarBtn"
+        android:onClick="selectFrag"
+
+        android:text="PLAY ON GUITAR"
+        android:textColor="#ED4B94"
+        android:textSize="20sp"
+
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/buttonshape"
+        android:drawableLeft="@drawable/iconguitar"
+        android:drawablePadding="-20dp"
+
+        android:fontFamily="sans-serif-light"
+        android:layout_marginBottom="10dp"
+        />
+
+    <Button
+        android:id="@+id/listenToSongBtn"
+
+        android:text="LISTEN TO SONG"
+        android:textColor="#ED4B94"
+        android:textSize="20sp"
+
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/buttonshape"
+        android:drawableLeft="@drawable/iconear"
+        android:drawablePadding="-20dp"
+        android:layout_marginTop="5dp"
+
+        android:fontFamily="sans-serif-light"
+
+        android:onClick="onOpenWebBrowser"
+        android:layout_marginBottom="15dp"
+
+        />
+
+</LinearLayout>
