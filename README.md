@@ -19,3 +19,10 @@ I'm not an Android expert by any means, but I thought I might try to add some ba
 
 I don't have any prior experience with setting up Intents and launching new activities, but if someone does the research, please add information here so we don't have to all waste googling time.  We'll need intents to set up the Download More Songs feature (open the browser pointing to Spotify or something), and the Listen to Song feature (open the Media Player with whatever song)
 
+## Toq Notifications
+
+Chords should be displayed like this:
+
+    C: 032010 | G: 320003 | F: xx3211
+
+The numbers correspond to what frets need to be pushed down.
