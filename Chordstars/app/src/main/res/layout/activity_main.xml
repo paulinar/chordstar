@@ -7,7 +7,7 @@
     android:gravity="center" >
 
     <fragment
-        android:name="guitarheroes.com.chordstars.SelectSongFrag1"
+        android:name="guitarheroes.com.chordstar.SelectSongFrag1"
         android:id="@+id/fragment_place"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
