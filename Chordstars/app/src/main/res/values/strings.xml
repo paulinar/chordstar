@@ -4,5 +4,12 @@
     <string name="app_name">Chordstar</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string-array name="songs">
+        <item>Taylor Swift - State of Grace</item>
+        <item>Taylor Swift - Shake it Off</item>
+        <item>Taylor Swift - Blank Space</item>
+        <item>T-Pain - Buy You A Drank</item>
+        <item>YOUR SONGS</item>
+    </string-array>
 
 </resources>

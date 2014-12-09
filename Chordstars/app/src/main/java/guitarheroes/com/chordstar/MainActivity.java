@@ -20,6 +20,12 @@ public class MainActivity extends Activity {
 
         setContentView(R.layout.activity_main);
 
+        Fragment firstFragment = new SelectSongFrag1();
+        firstFragment.setArguments(getIntent().getExtras());
+        FragmentTransaction t = getFragmentManager().beginTransaction();
+        t.add(R.id.fragment_place, firstFragment);
+        t.commit();
+
 //        hiddenBtn.setOnClickListener(new View.OnClickListener(){
 //            @Override
 //            public void onClick(View v) {
@@ -56,10 +62,6 @@ public class MainActivity extends Activity {
 
         if (view == findViewById(R.id.selectSongBtn)) {
             fr = new SelectSongFrag2();
-            findViewById(R.id.selectSongBtn).setVisibility(View.GONE);
-            findViewById(R.id.downloadMoreBtn).setVisibility(View.GONE);
-            findViewById(R.id.musicalNote).setVisibility(View.GONE);
-
         } else if (view == findViewById(R.id.downloadMoreBtn)) {
             fr = new SelectSongFrag1(); // TODO: clean up code
             startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("http://www.google.com")));
@@ -69,9 +71,9 @@ public class MainActivity extends Activity {
 
         FragmentManager fm = getFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
-
         fragmentTransaction.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left);
         fragmentTransaction.replace(R.id.fragment_place, fr);
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
     }
@@ -83,6 +85,7 @@ public class MainActivity extends Activity {
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left);
         fragmentTransaction.replace(R.id.fragment_place, fr);
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
     }
@@ -94,6 +97,7 @@ public class MainActivity extends Activity {
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left);
         fragmentTransaction.replace(R.id.fragment_place, fr);
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
     }
@@ -105,6 +109,7 @@ public class MainActivity extends Activity {
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left);
         fragmentTransaction.replace(R.id.fragment_place, fr);
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
         final Handler handler = new Handler();
@@ -117,6 +122,7 @@ public class MainActivity extends Activity {
                 FragmentTransaction newFT = newFM.beginTransaction();
                 newFT.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left);
                 newFT.replace(R.id.fragment_place, endSessionFrag);
+                newFT.addToBackStack(null);
                 newFT.commit();
             }
         }, 5000);
