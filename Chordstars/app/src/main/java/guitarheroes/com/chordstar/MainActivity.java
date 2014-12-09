@@ -12,7 +12,6 @@ import android.app.FragmentTransaction;
 
 import android.os.*;
 
-
 public class MainActivity extends Activity {
 
     @Override
