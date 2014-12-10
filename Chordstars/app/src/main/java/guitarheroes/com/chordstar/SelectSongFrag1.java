@@ -21,6 +21,8 @@ public class SelectSongFrag1 extends Fragment {
         mSongSpinner = (Spinner) view.findViewById(R.id.selectSongSpinner);
 
         setSpinnerContent();
+        getActivity().setTitle("SELECT A SONG");
+
         return view;
     }
 
