@@ -5,6 +5,9 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -25,24 +28,35 @@ public class MainActivity extends Activity {
         FragmentTransaction t = getFragmentManager().beginTransaction();
         t.add(R.id.fragment_place, firstFragment);
         t.commit();
+    }
 
-//        hiddenBtn.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View v) {
-//                try {
-//                    Thread.sleep(2000);
-//                    Fragment fr = new EndSessionFrag();
-//                    FragmentManager fm = getFragmentManager();
-//                    FragmentTransaction fragmentTransaction = fm.beginTransaction();
-//                    fragmentTransaction.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_in_left);
-//                    fragmentTransaction.replace(R.id.fragment_place, fr);
-//                    fragmentTransaction.commit();
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        });
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_view_progress:
+                switchToProgressFragment();
+                return true;
+            default:
+                return true;
+        }
+    }
+
+    private void switchToProgressFragment() {
+        Fragment fr;
+        fr = new ProgressFragment();
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left);
+        fragmentTransaction.replace(R.id.fragment_place, fr);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 
 
