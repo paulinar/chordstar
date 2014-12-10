@@ -33,9 +33,9 @@ public class SelectSongFrag1 extends Fragment {
      */
     private void setSpinnerContent() {
         String[] songs = getResources().getStringArray(R.array.songs);
-        ArrayAdapter<String> genderAdapter = new HintAdapter(
+        ArrayAdapter<String> songAdapter = new HintAdapter(
                 getActivity(), android.R.layout.simple_spinner_item, songs);
-        mSongSpinner.setAdapter(genderAdapter);
-        mSongSpinner.setSelection(genderAdapter.getCount());
+        mSongSpinner.setAdapter(songAdapter);
+        mSongSpinner.setSelection(songAdapter.getCount());
     }
 }
