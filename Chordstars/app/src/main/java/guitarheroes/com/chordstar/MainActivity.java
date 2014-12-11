@@ -38,7 +38,7 @@ public class MainActivity extends Activity {
     private final static String PREFS_FILE= "prefs_file";
     private final static String DECK_OF_CARDS_KEY= "deck_of_cards_key";
     private final static String DECK_OF_CARDS_VERSION_KEY= "deck_of_cards_version_key";
-    private final String[] notes = {"C: 11111", "B:11111", "A:111111", "D:111111", "E:111111", "F:111111"};
+    private final String[] notes = {"D:XX0232", "G:32003", "D:XX0232", "G:32003", "D:XX0232", "G:32003"};
 
     private DeckOfCardsManager mDeckOfCardsManager;
     private RemoteDeckOfCards mRemoteDeckOfCards;
