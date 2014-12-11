@@ -4,5 +4,22 @@
     <string name="app_name">Chordstar</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="view_progress">View Progress Log</string>
+
+    <string-array name="songs">
+        <item>Taylor Swift - State of Grace</item>
+        <item>Taylor Swift - Shake it Off</item>
+        <item>Taylor Swift - Blank Space</item>
+        <item>T-Pain - Buy You A Drank</item>
+        <item>YOUR SONGS</item>
+    </string-array>
+
+    <string-array name="times">
+        <item>THIS WEEK</item>
+        <item>LAST WEEK</item>
+        <item>AVERAGE WEEK</item>
+    </string-array>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

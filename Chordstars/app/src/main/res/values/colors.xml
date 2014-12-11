@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="hint_color" type="color">#FFE7A176</item>
+    <item name="spinner_color" type="color">#FFE7A176</item>
+    <item name="button_color" type="color">#FFED4B94</item>
+    <item name="bg_color" type="color">#FF1A1919</item>
+</resources>

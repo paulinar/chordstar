@@ -11,7 +11,48 @@
         android:id="@+id/musicalNote"
         android:layout_width="wrap_content"
         android:layout_height="340sp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="@dimen/music_note_bottom_margin"
         android:src="@drawable/musicalnote" />
+
+    <Spinner
+        android:id="@+id/selectSongSpinner"
+        android:layout_height="@dimen/button_height"
+        android:layout_width="@dimen/button_width"
+        android:layout_marginBottom="@dimen/button_spacing"/>
+
+    <Button
+        android:id="@+id/selectSongBtn"
+        android:onClick="selectFrag"
+
+        android:text="SELECT SONG"
+        android:textColor="@color/button_color"
+        android:textSize="20sp"
+
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:background="@drawable/buttonshape"
+
+        android:fontFamily="sans-serif-light"
+        android:layout_marginBottom="@dimen/button_spacing"
+        />
+
+    <Button
+        android:id="@+id/downloadMoreBtn"
+
+        android:text="DOWNLOAD MORE SONGS"
+        android:textColor="@color/button_color"
+        android:textSize="20sp"
+
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:background="@drawable/buttonshape"
+        android:drawableLeft="@drawable/iconplus"
+
+        android:fontFamily="sans-serif-light"
+
+        android:onClick="onOpenWebBrowser"
+        android:layout_marginBottom="15dp"
+
+        />
 
 </LinearLayout>
