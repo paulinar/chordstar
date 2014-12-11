@@ -254,7 +254,7 @@ public class MainActivity extends Activity {
         } else {
             message[0] = "Next: " + note2;
             if(note3.equals("")) message[1] = " ";
-            else message[1] = "After: " + note3;
+            else message[1] = "Next: " + note3;
         }
         String title = "Current: " + note1;
         // Create a NotificationTextCard
