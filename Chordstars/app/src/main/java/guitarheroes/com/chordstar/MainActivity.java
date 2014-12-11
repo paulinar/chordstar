@@ -43,6 +43,7 @@ public class MainActivity extends Activity {
     private DeckOfCardsManager mDeckOfCardsManager;
     private RemoteDeckOfCards mRemoteDeckOfCards;
     private RemoteResourceStore mRemoteResourceStore;
+    private boolean nowPlaying = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,6 +108,7 @@ public class MainActivity extends Activity {
     }
 
     public void endSession(View view) {
+        nowPlaying = false;
         Fragment fr;
         fr = new SessionSummaryFrag();
         FragmentManager fm = getFragmentManager();
@@ -178,21 +180,66 @@ public class MainActivity extends Activity {
 
     private void setup() {
         install(); //Install Toq app if not already installed
+        nowPlaying = true;
         beginPlaying(); //Begin playing notifications
     }
 
-    private void beginPlaying() {
-        playloop:
-        for (int i = 0; i < notes.length; i++){
-            if (i == notes.length-1) sendNotification(notes[i], "", "");  //last note
-            else if(i == notes.length-2) sendNotification(notes[i], notes[i+1], "");  //second to last note
-            else sendNotification(notes[i], notes[i+1], notes[i+2]);
-            //Sleep for 5 Seconds between Notifications
-            try { Thread.sleep(5000); }
-            catch (InterruptedException ex) { break playloop; }
+//    private void beginPlaying() {
+//        for (int i = 0; i < notes.length; i++){
+//            if (i == notes.length-1) sendNotification(notes[i], "", "");  //last note
+//            else if(i == notes.length-2) sendNotification(notes[i], notes[i+1], "");  //second to last note
+//            else sendNotification(notes[i], notes[i+1], notes[i+2]);
+//            //Sleep for 5 Seconds between Notifications
+//            try { Thread.sleep(5000); }
+//            catch (InterruptedException ex) { break; }
+//
+//        }
+//        //Once loop is done end the session
+//        endSession(findViewById(R.id.endSessionBtn));
+//    }
+
+    private void beginPlaying(){
+        if(nowPlaying) {
+            sendNotification(notes[0], notes[1], notes[2]);
+            final Handler handler1 = new Handler();
+            handler1.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    if(nowPlaying) {
+                        sendNotification(notes[1], notes[2], notes[3]);
+                        final Handler handler2 = new Handler();
+                        handler2.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                if (nowPlaying) {
+                                    sendNotification(notes[3], notes[4], notes[5]);
+                                    final Handler handler3 = new Handler();
+                                    handler3.postDelayed(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            if (nowPlaying) {
+                                                sendNotification(notes[4], notes[5], "");
+                                                final Handler handler4 = new Handler();
+                                                handler4.postDelayed(new Runnable() {
+                                                    @Override
+                                                    public void run() {
+                                                        if (nowPlaying) {
+                                                            sendNotification(notes[5], "", "");
+                                                            //Once loop is done end the session
+                                                            endSession(findViewById(R.id.endSessionBtn));
+                                                        }
+                                                    }
+                                                }, 5000);
+                                            }
+                                        }
+                                    }, 5000);
+                                }
+                            }
+                        }, 5000);
+                    }
+                }
+            }, 5000);
         }
-        //Once loop is done end the session
-        endSession(findViewById(R.id.endSessionBtn));
     }
 
     private void sendNotification(String note1, String note2, String note3) {
