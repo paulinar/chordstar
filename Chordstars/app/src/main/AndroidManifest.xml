@@ -20,7 +20,8 @@
         <!-- Main activity -->
         <activity
             android:name="guitarheroes.com.chordstar.MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 
