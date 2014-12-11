@@ -3,6 +3,33 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:spinnerStyle">@style/ChordStarSpinner</item>
+        <item name="android:spinnerItemStyle">@style/ChordStarSpinnerItem</item>
+        <item name="android:dropDownListViewStyle">@style/ChordStarSpinnerDivider</item>
     </style>
 
+    <style name="ChordStarSpinner"
+        parent="@android:style/Widget.Holo.Light.Spinner">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/spinnershape</item>
+        <item name="android:textColor">@color/spinner_color</item>
+        <item name="android:fontFamily">sans-serif-light"</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:padding">1dp</item>
+    </style>
+
+    <style name="ChordStarSpinnerItem"
+        parent="@android:style/Widget.Holo.TextView.SpinnerItem">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/spinneritemshape</item>
+        <item name="android:textColor">@color/spinner_color</item>
+        <item name="android:fontFamily">sans-serif-light"</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:padding">1dp</item>
+    </style>
+
+    <style name="ChordStarSpinnerDivider">
+        <item name="android:divider">@color/spinner_color</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
 </resources>

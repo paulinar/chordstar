@@ -5,6 +5,9 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -20,23 +23,40 @@ public class MainActivity extends Activity {
 
         setContentView(R.layout.activity_main);
 
-//        hiddenBtn.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View v) {
-//                try {
-//                    Thread.sleep(2000);
-//                    Fragment fr = new EndSessionFrag();
-//                    FragmentManager fm = getFragmentManager();
-//                    FragmentTransaction fragmentTransaction = fm.beginTransaction();
-//                    fragmentTransaction.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_in_left);
-//                    fragmentTransaction.replace(R.id.fragment_place, fr);
-//                    fragmentTransaction.commit();
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        });
+        Fragment firstFragment = new SelectSongFrag1();
+        firstFragment.setArguments(getIntent().getExtras());
+        FragmentTransaction t = getFragmentManager().beginTransaction();
+        t.add(R.id.fragment_place, firstFragment);
+        t.commit();
+    }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_view_progress:
+                switchToProgressFragment();
+                return true;
+            default:
+                return true;
+        }
+    }
+
+    private void switchToProgressFragment() {
+        Fragment fr;
+        fr = new ProgressFragment();
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left);
+        fragmentTransaction.replace(R.id.fragment_place, fr);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 
 
@@ -56,10 +76,6 @@ public class MainActivity extends Activity {
 
         if (view == findViewById(R.id.selectSongBtn)) {
             fr = new SelectSongFrag2();
-            findViewById(R.id.selectSongBtn).setVisibility(View.GONE);
-            findViewById(R.id.downloadMoreBtn).setVisibility(View.GONE);
-            findViewById(R.id.musicalNote).setVisibility(View.GONE);
-
         } else if (view == findViewById(R.id.downloadMoreBtn)) {
             fr = new SelectSongFrag1(); // TODO: clean up code
             startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("http://www.google.com")));
@@ -69,9 +85,9 @@ public class MainActivity extends Activity {
 
         FragmentManager fm = getFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
-
         fragmentTransaction.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left);
         fragmentTransaction.replace(R.id.fragment_place, fr);
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
     }
@@ -83,6 +99,7 @@ public class MainActivity extends Activity {
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left);
         fragmentTransaction.replace(R.id.fragment_place, fr);
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
     }
@@ -94,6 +111,7 @@ public class MainActivity extends Activity {
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left);
         fragmentTransaction.replace(R.id.fragment_place, fr);
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
     }
@@ -105,6 +123,7 @@ public class MainActivity extends Activity {
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left);
         fragmentTransaction.replace(R.id.fragment_place, fr);
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
         final Handler handler = new Handler();
@@ -117,6 +136,7 @@ public class MainActivity extends Activity {
                 FragmentTransaction newFT = newFM.beginTransaction();
                 newFT.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left);
                 newFT.replace(R.id.fragment_place, endSessionFrag);
+                newFT.addToBackStack(null);
                 newFT.commit();
             }
         }, 5000);
