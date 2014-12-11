@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1A1919"
+    android:gravity="center" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="C  D  E  F  G  A  B"
+        android:textSize="50sp"
+        android:textColor="#ED4B94"
+        android:fontFamily="sans-serif-light"
+
+        android:id="@+id/Pitch"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=" "
+        android:textSize="30sp"
+        android:textColor="#ED4B94"
+        android:fontFamily="sans-serif-light"
+
+        android:id="@+id/Space"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=" - |-|-|-|-|-|-|-|-|-|-| +"
+        android:textSize="50sp"
+        android:textColor="#ED4B94"
+        android:fontFamily="sans-serif-light"
+
+        android:id="@+id/Range"
+        android:layout_gravity="center_horizontal" />
+
+    <!--<Button-->
+        <!--android:id="@+id/endSessionBtn"-->
+        <!--android:onClick="endSession"-->
+
+        <!--android:text="END SESSION"-->
+        <!--android:textColor="#ED4B94"-->
+        <!--android:textSize="20sp"-->
+
+        <!--android:layout_width="300dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:background="@drawable/buttonshape"-->
+        <!--android:drawableLeft="@drawable/iconend"-->
+        <!--android:drawablePadding="-20dp"-->
+        <!--android:layout_marginTop="5dp"-->
+
+        <!--android:fontFamily="sans-serif-light"-->
+        <!--android:layout_marginBottom="15dp"-->
+
+        <!--/>-->
+
+</LinearLayout>
