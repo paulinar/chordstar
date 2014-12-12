@@ -7,17 +7,83 @@
     android:background="#1A1919"
     android:gravity="center" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="C  D  E  F  G  A  B"
-        android:textSize="50sp"
-        android:textColor="#ED4B94"
-        android:fontFamily="sans-serif-light"
 
-        android:id="@+id/Pitch"
-        android:layout_gravity="center_horizontal" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout2"
+        android:layout_gravity="bottom"
+        android:layout_height="wrap_content"
+        android:layout_weight="0">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="E"
+            android:textSize="50sp"
+            android:textColor="#ED4B94"
+            android:fontFamily="sans-serif-light"
+
+            android:id="@+id/btn_e1"
+            android:layout_gravity="center_horizontal" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="A"
+            android:textSize="50sp"
+            android:textColor="#ED4B94"
+            android:fontFamily="sans-serif-light"
+
+            android:id="@+id/btn_a"
+            android:layout_gravity="center_horizontal" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="D"
+            android:textSize="50sp"
+            android:textColor="#ED4B94"
+            android:fontFamily="sans-serif-light"
+
+            android:id="@+id/btn_d"
+            android:layout_gravity="center_horizontal" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="G"
+            android:textSize="50sp"
+            android:textColor="#ED4B94"
+            android:fontFamily="sans-serif-light"
+
+            android:id="@+id/btn_g"
+            android:layout_gravity="center_horizontal" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="B"
+            android:textSize="50sp"
+            android:textColor="#ED4B94"
+            android:fontFamily="sans-serif-light"
+
+            android:id="@+id/btn_b"
+            android:layout_gravity="center_horizontal" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="E"
+            android:textSize="50sp"
+            android:textColor="#ED4B94"
+            android:fontFamily="sans-serif-light"
+
+            android:id="@+id/btn_e2"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
@@ -31,7 +97,7 @@
         android:id="@+id/Space"
         android:layout_gravity="center_horizontal" />
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -43,24 +109,5 @@
         android:id="@+id/Range"
         android:layout_gravity="center_horizontal" />
 
-    <!--<Button-->
-        <!--android:id="@+id/endSessionBtn"-->
-        <!--android:onClick="endSession"-->
-
-        <!--android:text="END SESSION"-->
-        <!--android:textColor="#ED4B94"-->
-        <!--android:textSize="20sp"-->
-
-        <!--android:layout_width="300dp"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:background="@drawable/buttonshape"-->
-        <!--android:drawableLeft="@drawable/iconend"-->
-        <!--android:drawablePadding="-20dp"-->
-        <!--android:layout_marginTop="5dp"-->
-
-        <!--android:fontFamily="sans-serif-light"-->
-        <!--android:layout_marginBottom="15dp"-->
-
-        <!--/>-->
 
 </LinearLayout>

@@ -9,7 +9,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -72,6 +71,9 @@ public class MainActivity extends Activity {
         switch (item.getItemId()) {
             case R.id.action_view_progress:
                 switchToProgressFragment();
+                return true;
+            case R.id.action_tuner:
+                startActivity(new Intent(this, TunerFrag.class));
                 return true;
             default:
                 return true;
@@ -365,33 +367,6 @@ public class MainActivity extends Activity {
         editor.putInt(DECK_OF_CARDS_VERSION_KEY, Constants.VERSION_CODE);
         // Commit these changes
         editor.commit();
-    }
-
-    public void listenToSong(View view) {
-        Fragment fr;
-        fr = new ListenToSongFragment();
-        FragmentManager fm = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fm.beginTransaction();
-        fragmentTransaction.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left);
-        fragmentTransaction.replace(R.id.fragment_place, fr);
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
-    }
-
-    public void playbackSession(View view) {
-        Fragment fr;
-        fr = new PlaybackSessionFragment();
-        FragmentManager fm = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fm.beginTransaction();
-        fragmentTransaction.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left);
-        fragmentTransaction.replace(R.id.fragment_place, fr);
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
-    }
-
-    public void openVoiceRecorder(View v) {
-        Intent intent = new Intent(MediaStore.Audio.Media.RECORD_SOUND_ACTION);
-        startActivity(intent);
     }
 
 }
