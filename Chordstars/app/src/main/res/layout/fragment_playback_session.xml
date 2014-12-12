@@ -89,7 +89,7 @@
 
         android:fontFamily="sans-serif-light"
 
-        android:onClick="onOpenWebBrowser"
+        android:onClick="openVoiceRecorder"
         android:layout_marginBottom="15dp"
 
         />
