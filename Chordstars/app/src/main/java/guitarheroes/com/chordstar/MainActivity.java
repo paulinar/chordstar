@@ -146,4 +146,15 @@ public class MainActivity extends Activity {
 //        startActivity(intent);
     }
 
+    public void listenToSong(View view) {
+        Fragment fr;
+        fr = new ListenToSongFragment();
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left);
+        fragmentTransaction.replace(R.id.fragment_place, fr);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+    }
+
 }

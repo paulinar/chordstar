@@ -8,7 +8,7 @@
     android:gravity="center" >
 
     <TextView
-        android:id="@+id/youSelected"
+        android:id="@+id/practice_caption"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TIME SPENT PRACTICING"
@@ -28,8 +28,7 @@
         android:id="@+id/barchart"
         android:layout_width="wrap_content"
         android:layout_height="340sp"
-        android:layout_centerInParent="true"
-        android:src="@drawable/barchart1" />
+        android:layout_centerInParent="true"/>
 
 
 </LinearLayout>

@@ -2,6 +2,7 @@ package guitarheroes.com.chordstar;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,18 +36,22 @@ public class ProgressFragment extends Fragment {
     private void setSpinnerContent() {
         ArrayAdapter<CharSequence> timeAdapter = ArrayAdapter.createFromResource(
                 getActivity(), R.array.times, android.R.layout.simple_spinner_item);
+        timeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mSongSpinner.setAdapter(timeAdapter);
         mSongSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 ImageView imageView = (ImageView) view.findViewById(R.id.barchart);
-                switch (position) {
-                    case 0:
-                        imageView.setBackgroundResource(R.drawable.barchart1);
-                        return;
-                    default:
-                        return;
-                }
+                imageView.setImageResource(R.drawable.barchart1);
+//                imageView.setBackgroundResource(R.drawable.barchart1);
+//                switch (position) {
+//                    case 0:
+//                        imageView.setImageResource(R.drawable.barchart1);
+//                        return;
+//                    default:
+//                        imageView.setImageResource(R.drawable.barchart1);
+//                        return;
+//                }
             }
 
             @Override

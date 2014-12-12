@@ -39,41 +39,38 @@
 
     <Button
         android:id="@+id/playOnGuitarBtn"
-        android:onClick="playOnGuitar"
-
-        android:text="PLAY ON GUITAR"
-        android:textColor="#ED4B94"
-        android:textSize="20sp"
-
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/buttonshape"
         android:drawableLeft="@drawable/iconguitar"
         android:drawablePadding="-20dp"
-
-        android:fontFamily="sans-serif-light"
         android:layout_marginBottom="10dp"
+
+        android:text="PLAY ON GUITAR"
+        android:textColor="#ED4B94"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-light"
+
+
+        android:onClick="playOnGuitar"
         />
 
     <Button
         android:id="@+id/listenToSongBtn"
-
-        android:text="LISTEN TO SONG"
-        android:textColor="#ED4B94"
-        android:textSize="20sp"
-
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/buttonshape"
         android:drawableLeft="@drawable/iconear"
         android:drawablePadding="-20dp"
         android:layout_marginTop="5dp"
-
-        android:fontFamily="sans-serif-light"
-
-        android:onClick="onOpenWebBrowser"
         android:layout_marginBottom="15dp"
 
+        android:text="LISTEN TO SONG"
+        android:textColor="#ED4B94"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-light"
+
+        android:onClick="listenToSong"
         />
 
 </LinearLayout>
