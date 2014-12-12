@@ -31,6 +31,8 @@
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:background="@drawable/buttonshape"
+        android:drawableLeft="@drawable/iconcheck"
+        android:drawablePadding="-20dp"
 
         android:fontFamily="sans-serif-light"
         android:layout_marginBottom="@dimen/button_spacing"

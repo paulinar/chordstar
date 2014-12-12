@@ -110,7 +110,7 @@ public class MainActivity extends Activity {
         if (view == findViewById(R.id.selectSongBtn)) {
             fr = new SelectSongFrag2();
         } else if (view == findViewById(R.id.downloadMoreBtn)) {
-            fr = new SelectSongFrag1(); // TODO: clean up code
+            fr = new SelectSongFrag1();
             startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("http://www.google.com")));
         } else {
             fr = new SelectSongFrag1();
@@ -140,7 +140,7 @@ public class MainActivity extends Activity {
 
     public void restartSession(View view) {
         Fragment fr;
-        fr = new EndSessionFrag();
+        fr = new SelectSongFrag2();
         FragmentManager fm = getFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left);

@@ -85,29 +85,36 @@
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text=" "
-        android:textSize="30sp"
-        android:textColor="#ED4B94"
-        android:fontFamily="sans-serif-light"
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+        <!--android:text=" "-->
+        <!--android:textSize="30sp"-->
+        <!--android:textColor="#ED4B94"-->
+        <!--android:fontFamily="sans-serif-light"-->
 
-        android:id="@+id/Space"
-        android:layout_gravity="center_horizontal" />
+        <!--android:id="@+id/Space"-->
+        <!--android:layout_gravity="center_horizontal" />-->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text=" - |-|-|-|-|-|-|-|-|-|-| +"
-        android:textSize="50sp"
-        android:textColor="#ED4B94"
-        android:fontFamily="sans-serif-light"
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+        <!--android:text=" - |-|-|-|-|-|-|-|-|-|-| +"-->
+        <!--android:textSize="50sp"-->
+        <!--android:textColor="#ED4B94"-->
+        <!--android:fontFamily="sans-serif-light"-->
 
-        android:id="@+id/Range"
-        android:layout_gravity="center_horizontal" />
+        <!--android:id="@+id/Range"-->
+        <!--android:layout_gravity="center_horizontal" />-->
 
+    <ImageView
+        android:id="@+id/tickMarks"
+        android:layout_width="750px"
+        android:layout_height="152px"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/tickmarks" />
 
 </LinearLayout>
