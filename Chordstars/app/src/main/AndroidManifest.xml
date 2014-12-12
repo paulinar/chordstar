@@ -8,13 +8,20 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="guitarheroes.com.chordstar.MainActivity"
-            android:label="@string/app_name" >
+            android:name="guitarheroes.com.chordstar.SplashScreen"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Black.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <!-- Main activity -->
+        <activity
+            android:name="guitarheroes.com.chordstar.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 
