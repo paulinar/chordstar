@@ -157,4 +157,15 @@ public class MainActivity extends Activity {
         fragmentTransaction.commit();
     }
 
+    public void playbackSession(View view) {
+        Fragment fr;
+        fr = new PlaybackSessionFragment();
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left);
+        fragmentTransaction.replace(R.id.fragment_place, fr);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+    }
+
 }

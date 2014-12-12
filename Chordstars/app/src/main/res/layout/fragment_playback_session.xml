@@ -34,46 +34,50 @@
         android:fontFamily="sans-serif-light"
         android:layout_marginTop="-15dp"/>
 
-    <Button
-        android:id="@+id/playbackSessionBtn"
-        android:onClick="playbackSession"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
 
-        android:text="PLAYBACK SESSION"
-        android:textColor="#ED4B94"
-        android:textSize="20sp"
+        <Button
+            android:layout_width="48dp"
+            android:layout_height="36dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rewind"
+            />
 
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:background="@drawable/buttonshape"
-        android:drawableLeft="@drawable/iconplayback"
-        android:drawablePadding="-40dp"
+        <Button
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/play"
 
-        android:fontFamily="sans-serif-light"
-        android:layout_marginBottom="10dp"
-        />
+            android:onClick="onOpenWebBrowser"
+            />
 
-    <Button
-        android:id="@+id/restartSessionBtn"
-        android:onClick="selectFrag"
+        <Button
+            android:layout_width="48dp"
+            android:layout_height="36dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/ff"
+            />
 
-        android:text="RESTART SESSION"
-        android:textColor="#ED4B94"
-        android:textSize="20sp"
+    </LinearLayout>
 
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:background="@drawable/buttonshape"
-        android:drawableLeft="@drawable/iconrestart"
-        android:drawablePadding="-57dp"
-
-        android:fontFamily="sans-serif-light"
-        android:layout_marginBottom="10dp"
-        />
+    <SeekBar
+        android:id="@+id/PRICEseekBarID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="26dp"
+        android:max="100" />
 
     <Button
         android:id="@+id/chooseDiffSongBtn"
 
-        android:text="CHOOSE ANOTHER SONG"
+        android:text="SAVE RECORDING"
         android:textColor="#ED4B94"
         android:textSize="20sp"
 
