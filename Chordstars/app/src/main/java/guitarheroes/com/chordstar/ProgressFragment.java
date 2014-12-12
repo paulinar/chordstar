@@ -41,17 +41,15 @@ public class ProgressFragment extends Fragment {
         mSongSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                ImageView imageView = (ImageView) view.findViewById(R.id.barchart);
-                imageView.setImageResource(R.drawable.barchart1);
-//                imageView.setBackgroundResource(R.drawable.barchart1);
-//                switch (position) {
-//                    case 0:
-//                        imageView.setImageResource(R.drawable.barchart1);
-//                        return;
-//                    default:
-//                        imageView.setImageResource(R.drawable.barchart1);
-//                        return;
-//                }
+                ImageView imageView = (ImageView) getView().findViewById(R.id.barchart);
+                switch (position) {
+                    case 0:
+                        imageView.setImageResource(R.drawable.barchart1);
+                        return;
+                    default:
+                        imageView.setImageResource(R.drawable.barchart1);
+                        return;
+                }
             }
 
             @Override

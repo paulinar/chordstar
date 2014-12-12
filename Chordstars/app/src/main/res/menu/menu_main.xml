@@ -8,13 +8,8 @@
         android:orderInCategory="1"
         app:showAsAction="never" />
 
-    <item android:id="@+id/action_tuner"
-        android:title="Tuner"
-        android:orderInCategory="100"
-        app:showAsAction="never" />
-
-    <item android:id="@+id/action_settings"
-        android:title="@string/action_settings"
-        android:orderInCategory="100"
+    <item android:id="@+id/action_view_tuner"
+        android:title="@string/view_tuner"
+        android:orderInCategory="2"
         app:showAsAction="never" />
 </menu>

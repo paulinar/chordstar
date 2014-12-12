@@ -73,7 +73,7 @@ public class MainActivity extends Activity {
             case R.id.action_view_progress:
                 switchToProgressFragment();
                 return true;
-            case R.id.action_tuner:
+            case R.id.action_view_tuner:
                 startActivity(new Intent(this, TunerFrag.class));
                 return true;
             default:
@@ -91,7 +91,6 @@ public class MainActivity extends Activity {
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
-
 
     public void onOpenWebBrowser(View v) {
         Intent webPageIntent = new Intent(Intent.ACTION_VIEW);
