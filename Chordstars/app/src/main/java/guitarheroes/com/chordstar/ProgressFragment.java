@@ -46,8 +46,11 @@ public class ProgressFragment extends Fragment {
                     case 0:
                         imageView.setImageResource(R.drawable.barchart1);
                         return;
+                    case 1:
+                        imageView.setImageResource(R.drawable.barchart2);
+                        return;
                     default:
-                        imageView.setImageResource(R.drawable.barchart1);
+                        imageView.setImageResource(R.drawable.barchart3);
                         return;
                 }
             }

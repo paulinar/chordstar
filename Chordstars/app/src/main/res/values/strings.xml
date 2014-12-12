@@ -4,8 +4,9 @@
     <string name="app_name">Chordstar</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="view_progress">View Progress Log</string>
-    <string name="view_tuner">View Tuner</string>
+    <string name="my_progress">My Progress</string>
+    <string name="tuner">Tuner</string>
+    <string name="learn_songs">Learn Songs</string>
 
     <string-array name="songs">
         <item>Taylor Swift - State of Grace</item>

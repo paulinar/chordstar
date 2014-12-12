@@ -11,8 +11,8 @@
         android:id="@+id/practice_caption"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TIME SPENT PRACTICING"
-        android:textColor="#E9A172"
+        android:text="# OF HOURS PRACTICED"
+        android:textColor="#57D9BB"
         android:textSize="20sp"
         android:gravity="center"
         android:fontFamily="sans-serif-light"
@@ -22,7 +22,8 @@
         android:id="@+id/selectTimeFrameSpinner"
         android:layout_height="@dimen/button_height"
         android:layout_width="@dimen/button_width"
-        android:layout_marginBottom="@dimen/button_spacing"/>
+        android:layout_marginBottom="@dimen/button_spacing"
+        android:drawableLeft="@drawable/icondropdown"/>
 
     <ImageView
         android:id="@+id/barchart"

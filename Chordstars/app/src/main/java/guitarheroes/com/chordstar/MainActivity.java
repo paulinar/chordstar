@@ -76,6 +76,9 @@ public class MainActivity extends Activity {
             case R.id.action_view_tuner:
                 startActivity(new Intent(this, TunerFrag.class));
                 return true;
+            case R.id.action_select_song:
+                switchToSelectSongFragment();
+                return true;
             default:
                 return true;
         }
@@ -84,6 +87,17 @@ public class MainActivity extends Activity {
     private void switchToProgressFragment() {
         Fragment fr;
         fr = new ProgressFragment();
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left);
+        fragmentTransaction.replace(R.id.fragment_place, fr);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+    }
+
+    private void switchToSelectSongFragment() {
+        Fragment fr;
+        fr = new SelectSongFrag1();
         FragmentManager fm = getFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left);

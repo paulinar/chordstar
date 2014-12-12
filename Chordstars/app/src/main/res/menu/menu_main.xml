@@ -4,12 +4,17 @@
     tools:context="phc.android.MainActivity" >
 
     <item android:id="@+id/action_view_progress"
-        android:title="@string/view_progress"
+        android:title="@string/my_progress"
         android:orderInCategory="1"
         app:showAsAction="never" />
 
     <item android:id="@+id/action_view_tuner"
-        android:title="@string/view_tuner"
+        android:title="@string/tuner"
         android:orderInCategory="2"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_select_song"
+        android:title="@string/learn_songs"
+        android:orderInCategory="3"
         app:showAsAction="never" />
 </menu>
