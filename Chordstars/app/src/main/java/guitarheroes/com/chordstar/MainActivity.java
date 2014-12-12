@@ -74,7 +74,7 @@ public class MainActivity extends Activity {
                 switchToProgressFragment();
                 return true;
             case R.id.action_view_tuner:
-                switchToTunerFragment();
+                startActivity(new Intent(this, TunerFrag.class));
                 return true;
             default:
                 return true;
@@ -91,18 +91,6 @@ public class MainActivity extends Activity {
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
-
-    private void switchToTunerFragment() {
-        Fragment fr;
-        fr = new TunerFrag();
-        FragmentManager fm = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fm.beginTransaction();
-        fragmentTransaction.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left);
-        fragmentTransaction.replace(R.id.fragment_place, fr);
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
-    }
-
 
     public void onOpenWebBrowser(View v) {
         Intent webPageIntent = new Intent(Intent.ACTION_VIEW);
@@ -121,7 +109,7 @@ public class MainActivity extends Activity {
         if (view == findViewById(R.id.selectSongBtn)) {
             fr = new SelectSongFrag2();
         } else if (view == findViewById(R.id.downloadMoreBtn)) {
-            fr = new SelectSongFrag1(); // TODO: clean up code
+            fr = new SelectSongFrag1();
             startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("http://www.google.com")));
         } else {
             fr = new SelectSongFrag1();
@@ -151,7 +139,7 @@ public class MainActivity extends Activity {
 
     public void restartSession(View view) {
         Fragment fr;
-        fr = new EndSessionFrag();
+        fr = new SelectSongFrag2();
         FragmentManager fm = getFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left);
@@ -380,7 +368,7 @@ public class MainActivity extends Activity {
         // Commit these changes
         editor.commit();
     }
-
+    
     public void listenToSong(View view) {
         Fragment fr;
         fr = new ListenToSongFragment();
@@ -407,5 +395,4 @@ public class MainActivity extends Activity {
         Intent intent = new Intent(MediaStore.Audio.Media.RECORD_SOUND_ACTION);
         startActivity(intent);
     }
-
 }

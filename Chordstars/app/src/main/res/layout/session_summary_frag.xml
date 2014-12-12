@@ -54,7 +54,7 @@
 
     <Button
         android:id="@+id/restartSessionBtn"
-        android:onClick="selectFrag"
+        android:onClick="restartSession"
 
         android:text="RESTART SESSION"
         android:textColor="#ED4B94"

@@ -23,6 +23,11 @@
             android:label="@string/app_name"
             android:screenOrientation="portrait">
         </activity>
+        <activity
+            android:name="guitarheroes.com.chordstar.TunerFrag"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>
