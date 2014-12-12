@@ -6,6 +6,7 @@
         <item name="android:spinnerStyle">@style/ChordStarSpinner</item>
         <item name="android:spinnerItemStyle">@style/ChordStarSpinnerItem</item>
         <item name="android:dropDownListViewStyle">@style/ChordStarSpinnerDivider</item>
+        <item name="android:seekBarStyle">@style/SeekBarAppTheme</item>
     </style>
 
     <style name="ChordStarSpinner"
