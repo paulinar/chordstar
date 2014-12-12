@@ -73,6 +73,9 @@ public class MainActivity extends Activity {
             case R.id.action_view_progress:
                 switchToProgressFragment();
                 return true;
+            case R.id.action_view_tuner:
+                switchToTunerFragment();
+                return true;
             default:
                 return true;
         }
@@ -81,6 +84,17 @@ public class MainActivity extends Activity {
     private void switchToProgressFragment() {
         Fragment fr;
         fr = new ProgressFragment();
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left);
+        fragmentTransaction.replace(R.id.fragment_place, fr);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+    }
+
+    private void switchToTunerFragment() {
+        Fragment fr;
+        fr = new TunerFrag();
         FragmentManager fm = getFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left);
