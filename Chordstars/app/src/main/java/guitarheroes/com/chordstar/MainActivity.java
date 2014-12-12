@@ -73,6 +73,9 @@ public class MainActivity extends Activity {
             case R.id.action_view_progress:
                 switchToProgressFragment();
                 return true;
+            case R.id.action_tuner:
+                startActivity(new Intent(this, TunerFrag.class));
+                return true;
             default:
                 return true;
         }
@@ -366,7 +369,7 @@ public class MainActivity extends Activity {
         // Commit these changes
         editor.commit();
     }
-
+    
     public void listenToSong(View view) {
         Fragment fr;
         fr = new ListenToSongFragment();
@@ -393,5 +396,4 @@ public class MainActivity extends Activity {
         Intent intent = new Intent(MediaStore.Audio.Media.RECORD_SOUND_ACTION);
         startActivity(intent);
     }
-
 }
